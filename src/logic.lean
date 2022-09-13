@@ -112,7 +112,9 @@ end
 theorem contrapositive_law :
   (P → Q) ↔ (¬Q → ¬P)  :=
 begin
-  sorry,
+  apply iff.intro, 
+  apply impl_as_contrapositive,
+  apply impl_as_contrapositive_converse,
 end
 
 
