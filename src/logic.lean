@@ -467,7 +467,9 @@ end
 theorem demorgan_exists_law :
   ¬(∃x, P x) ↔ (∀x, ¬P x)  :=
 begin
-  sorry,
+  apply iff.intro,
+  apply demorgan_exists,
+  apply demorgan_exists_converse,
 end
 
 
