@@ -313,7 +313,9 @@ end
 theorem weaken_conj_right :
   (P∧Q) → P  :=
 begin
-  sorry,
+  intro h,
+  cases h with hp hq,
+  exact hp,
 end
 
 theorem weaken_conj_left :
