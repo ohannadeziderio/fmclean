@@ -158,7 +158,11 @@ end
 theorem disj_as_negconj :
   P∨Q → ¬(¬P∧¬Q)  :=
 begin
-  sorry,
+  intro h,
+  intro hnh,
+  cases h with hp hq,
+  cases hnh with hnp hnq,
+  contradiction,
 end
 
 theorem conj_as_negdisj :
@@ -175,7 +179,16 @@ end
 theorem demorgan_disj :
   ¬(P∨Q) → (¬P ∧ ¬Q)  :=
 begin
-  sorry,
+  intro h,
+  split,
+  intro hp,
+  apply h,
+  left,
+  exact hp,
+  intro hq,
+  apply h,
+  right,
+  exact hq,
 end
 
 theorem demorgan_disj_converse :
