@@ -160,8 +160,9 @@ theorem disj_as_negconj :
 begin
   intro h,
   intro hnh,
-  cases h with hp hq,
   cases hnh with hnp hnq,
+  cases h with hp hq,
+  contradiction,
   contradiction,
 end
 
