@@ -202,8 +202,10 @@ theorem demorgan_disj_converse :
 begin
   intro h,
   intro g,
-  cases h with hnp hnq,
   cases g with hp hq,
+  cases h with hnp hnq,
+  contradiction,
+  cases h with hnp hnq,
   contradiction,
 end
 
